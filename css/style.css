@@ -7,43 +7,46 @@ header{
     margin-top: 30px;
 }
 /* common style or utilities */
-.nav-container{
-    padding: 0;
-    margin: 0;
-    background-color: #562EFF;
+
+/* nav start  */
+
+nav{
+    background-color: #562eff;
+}
+.items {
+    max-width: 870px;
     width: 100%;
     height: 94px;
-}
-.nav-container a{
-    color: #FFFFFF;
-}
-nav ul{
-    float: right;
-    margin-right: 40px;
-    margin-top: 36px;
-}
-.nav-container ul li{
-    display: inline-block;
-    margin: 0 80px;
-}
-.nav-container ul li a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    }
+    .logo {
+    width: 50%;
+    }
+    ul {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    }
+    ul > li > a {
+    color: white;
     text-decoration: none;
-}
-.nav-container ul li img{
-    position: absolute;
-    width: 51px;
-    height: 51px;
-    left: 1100px;
-    top: 24px;
-}
-.logo-img {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    }
+    .logo-img {
     position: absolute;
     margin-top: 19px;
     margin-left: 220px;
     width: 40.42px;
     height: 51px;
-}
-.logo-img span{
+    }
+    .logo-img span {
     position: absolute;
     width: 54px;
     height: 36px;
@@ -52,7 +55,10 @@ nav ul{
     font-size: 24px;
     font-weight: 500;
     color: white;
-}
+    }
+
+/* nav end  */
+
 body{
     font-family: 'Open Sans', sans-serif;
     background-color: #F3F1FF;
@@ -152,12 +158,6 @@ hr{
     justify-content: space-evenly;
     
 }
-/* .course-duration i, span{
-    font-weight: 600;
-    font-size: 14.6913px;
-    line-height: 20px;
-    color: #FF4A60;
-} */
 .fa-star{
     font-size: 12px;
 }
@@ -170,30 +170,40 @@ hr{
 .fa-star.empty{
     color:#b8a0a0;
 }
-/* media query  */
 
-/* Mobile devices */
+/* media queries */
+
+/* mobile  */
+
 @media only screen and (max-width:688px) {
+    nav{
+        display: block;
+        position: absolute;
+        padding: 15px 20px;
+    }
+    .menu{
+        margin-top: 15px;
+        display: none;
+    }
     .container{
         width: 100%;
     }
     .players, .blogs, .courses{
-        grid-template-columns: repeat(1, auto);
+        grid-template-columns: repeat(1, 1fr);
     }
     .player, .blog{
         flex-direction: column;
     }
 }
-
-/* i pad device */
+ /* i pad device */
 @media only screen and (min-width:688px) and (max-width:992px) {
     .container{
         width: 100%;
     }
     .players, .courses{
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
     }
     .blogs{
-        grid-template-columns: repeat(1, auto);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
