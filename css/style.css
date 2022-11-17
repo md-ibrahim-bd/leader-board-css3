@@ -156,7 +156,7 @@ hr{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+    margin-right: 23px;
 }
 .fa-star{
     font-size: 12px;
